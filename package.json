@@ -1,0 +1,73 @@
+{
+  "name": "flowbite-next-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "format": "prettier --check --ignore-path .gitignore --write .",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "dependencies": {
+    "flowbite": "^1.4.7",
+    "flowbite-react": "^0.0.25",
+    "next": "^12.1.6",
+    "prettier": "^2.6.2",
+    "react": "17",
+    "react-dom": "17",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "@types/react": "18",
+    "autoprefixer": "10.4.7",
+    "eslint": "^8.15.0",
+    "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-tailwindcss": "^3.5.0",
+    "postcss": "^8.4.14",
+    "prettier-plugin-organize-imports": "^2.3.4",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.6.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "next/core-web-vitals",
+      "plugin:jsx-a11y/recommended",
+      "plugin:react/jsx-runtime",
+      "plugin:react/recommended",
+      "plugin:tailwindcss/recommended",
+      "prettier"
+    ],
+    "ignorePatterns": [
+      "*.config.js"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "jsx-a11y",
+      "react",
+      "tailwindcss"
+    ],
+    "root": true,
+    "rules": {
+      "no-undef": "off",
+      "react/react-in-jsx-scope": "off",
+      "tailwindcss/classnames-order": [
+        "warn",
+        {
+          "officialSorting": true
+        }
+      ]
+    }
+  }
+}
