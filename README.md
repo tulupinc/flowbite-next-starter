@@ -12,7 +12,7 @@ It also includes:
 
 ## Getting Started
 
-`Next.js` require [`Node.js`](https://nodejs.org).
+`Next.js` requires [`Node.js`](https://nodejs.org).
 
 If you don't already have `npm` and `yarn` available, make sure you set them up.
 
