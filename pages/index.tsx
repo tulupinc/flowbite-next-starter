@@ -256,7 +256,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="my-6 text-4xl font-bold">Sidebar</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold">Sidebar</h2>
         </header>
         <SidebarExample />
       </section>
@@ -274,19 +274,19 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="my-6 text-4xl font-bold">Tabs</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold">Tabs</h2>
         </header>
         <TabsExample />
       </section>
       <section>
         <header>
-          <h2 className="my-6 text-4xl font-bold">Toast</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold">Toast</h2>
         </header>
         <ToastExample />
       </section>
       <section>
         <header>
-          <h2 className="my-6 text-4xl font-bold">Tooltips</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold">Tooltips</h2>
         </header>
         <TooltipsExample />
       </section>
@@ -534,22 +534,37 @@ function CarouselExample(): JSX.Element {
     <Carousel>
       <Image
         alt="..."
+        layout="raw"
+        height="100%"
+        width="100%"
         src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
       />
       <Image
         alt="..."
+        layout="raw"
+        height="100%"
+        width="100%"
         src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
       />
       <Image
         alt="..."
+        layout="raw"
+        height="100%"
+        width="100%"
         src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
       />
       <Image
         alt="..."
+        layout="raw"
+        height="100%"
+        width="100%"
         src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
       />
       <Image
         alt="..."
+        layout="raw"
+        height="100%"
+        width="100%"
         src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
       />
     </Carousel>
@@ -609,10 +624,10 @@ function FooterExample(): JSX.Element {
       <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
         <div>
           <Footer.Brand
-            href="https://flowbite.com"
-            src="https://flowbite.com/docs/images/logo.svg"
             alt="Flowbite Logo"
+            href="https://flowbite.com"
             name="Flowbite"
+            src="https://flowbite.com/docs/images/logo.svg"
             className="m-6"
           />
         </div>
@@ -778,7 +793,9 @@ function NavbarsExample(): JSX.Element {
         <Image
           alt="Flowbite Logo"
           src="https://flowbite.com/docs/images/logo.svg"
-          className="mr-3 h-6 sm:h-9"
+          height="16"
+          width="16"
+          className="mr-3"
         />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
           Flowbite
