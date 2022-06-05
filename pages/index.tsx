@@ -3,6 +3,7 @@ import {
   Alert,
   Avatar,
   Badge,
+  Breadcrumb,
   Button,
   Card,
   Carousel,
@@ -38,6 +39,7 @@ import {
   HiDatabase,
   HiExclamation,
   HiEye,
+  HiHome,
   HiInbox,
   HiOutlineAdjustments,
   HiShoppingBag,
@@ -174,7 +176,7 @@ function HomePage(): JSX.Element {
         <header>
           <h2 className="mt-9 mb-3 text-4xl font-bold">Breadcrumb</h2>
         </header>
-        {/* <BreadcrumbExample /> */}
+        <BreadcrumbExample />
       </section>
       <section>
         <header>
@@ -228,7 +230,8 @@ function HomePage(): JSX.Element {
         <header>
           <h2 className="mt-9 mb-3 text-4xl font-bold">Modal</h2>
         </header>
-        <ModalExample />
+        <p>Currently broken in React 18 on SSR apps.</p>
+        {/* <ModalExample /> */}
       </section>
       <section>
         <header>
@@ -297,10 +300,8 @@ function HomePage(): JSX.Element {
 function AccordionExample(): JSX.Element {
   return (
     <Accordion flush>
-      <Accordion.Panel open>
-        <Accordion.Title arrowIcon={undefined}>
-          What is Flowbite?
-        </Accordion.Title>
+      <Accordion.Panel>
+        <Accordion.Title>What is Flowbite?</Accordion.Title>
         <Accordion.Content>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
             Flowbite is an open-source library of interactive components built
@@ -321,9 +322,7 @@ function AccordionExample(): JSX.Element {
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
-        <Accordion.Title arrowIcon={undefined}>
-          Is there a Figma file available?
-        </Accordion.Title>
+        <Accordion.Title>Is there a Figma file available?</Accordion.Title>
         <Accordion.Content>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
             Flowbite is first conceptualized and designed using the Figma
@@ -344,7 +343,7 @@ function AccordionExample(): JSX.Element {
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
-        <Accordion.Title arrowIcon={undefined}>
+        <Accordion.Title>
           What are the differences between Flowbite and Tailwind UI?
         </Accordion.Title>
         <Accordion.Content>
@@ -467,6 +466,18 @@ function BadgesExample(): JSX.Element {
   );
 }
 
+function BreadcrumbExample(): JSX.Element {
+  return (
+    <Breadcrumb aria-label="Default breadcrumb example">
+      <Breadcrumb.Item href="#" icon={HiHome}>
+        Home
+      </Breadcrumb.Item>
+      <Breadcrumb.Item href="#">Projects</Breadcrumb.Item>
+      <Breadcrumb.Item>Flowbite React</Breadcrumb.Item>
+    </Breadcrumb>
+  );
+}
+
 function ButtonsExample(): JSX.Element {
   return (
     <div className="flex flex-wrap items-center gap-2">
@@ -513,19 +524,20 @@ function ButtonGroupExample(): JSX.Element {
 
 function CardExample(): JSX.Element {
   return (
-    <Card
-      className="max-w-sm"
-      imgAlt="Meaningful alt text for an image that is not purely decorative"
-      imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
-    >
-      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
-      </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        Here are the biggest enterprise technology acquisitions of 2021 so far,
-        in reverse chronological order.
-      </p>
-    </Card>
+    <div className="max-w-sm">
+      <Card
+        imgAlt="Meaningful alt text for an image that is not purely decorative"
+        imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
+      >
+        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Noteworthy technology acquisitions 2021
+        </h5>
+        <p className="font-normal text-gray-700 dark:text-gray-400">
+          Here are the biggest enterprise technology acquisitions of 2021 so
+          far, in reverse chronological order.
+        </p>
+      </Card>
+    </div>
   );
 }
 
