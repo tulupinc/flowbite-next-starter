@@ -16,7 +16,7 @@
     "prettier": "^2.6.2",
     "react": "17",
     "react-dom": "17",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.35",
