@@ -12,7 +12,7 @@
   "dependencies": {
     "flowbite": "^1.4.7",
     "flowbite-react": "^0.0.25",
-    "next": "^12.1.6",
+    "next": "^12.2.0",
     "prettier": "^2.6.2",
     "react": "17",
     "react-dom": "17",
