@@ -3,11 +3,10 @@
  */
 module.exports = {
   content: [
-    "./components/**/*.{ts,tsx}",
-    "./pages/**/*.{ts,tsx}",
-    "./public/**/*.html",
     "./node_modules/flowbite/**/*.js",
     "./node_modules/flowbite-react/**/*.js",
+    "./public/**/*.html",
+    "./src/**/*.{ts,tsx}",
   ],
   plugins: [require("flowbite/plugin")],
   theme: {},

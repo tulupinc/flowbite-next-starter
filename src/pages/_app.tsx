@@ -1,8 +1,9 @@
 import { Spinner } from "flowbite-react";
+import { AppProps } from "next/app";
 import { FC, Suspense } from "react";
 import "../styles/globals.css";
 
-const App: FC<unknown> = function ({ Component, pageProps }): JSX.Element {
+const App: FC<AppProps> = function ({ Component, pageProps }): JSX.Element {
   return (
     <Suspense
       fallback={

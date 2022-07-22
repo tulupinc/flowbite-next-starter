@@ -12,7 +12,6 @@ import {
   Footer,
   Label,
   ListGroup,
-  Modal,
   Navbar,
   Pagination,
   Progress,
@@ -22,6 +21,7 @@ import {
   Table,
   Tabs,
   TextInput,
+  Timeline,
   Toast,
   Tooltip,
 } from "flowbite-react";
@@ -30,7 +30,15 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { BiBuoy } from "react-icons/bi";
 import {
+  BsDribbble,
+  BsFacebook,
+  BsGithub,
+  BsInstagram,
+  BsTwitter,
+} from "react-icons/bs";
+import {
   HiAdjustments,
+  HiArrowNarrowRight,
   HiArrowSmRight,
   HiChartPie,
   HiCheck,
@@ -230,8 +238,7 @@ function HomePage(): JSX.Element {
         <header>
           <h2 className="mt-9 mb-3 text-4xl font-bold">Modal</h2>
         </header>
-        <p>Currently broken in React 18 on SSR apps.</p>
-        {/* <ModalExample /> */}
+        <ModalExample />
       </section>
       <section>
         <header>
@@ -280,6 +287,12 @@ function HomePage(): JSX.Element {
           <h2 className="mt-9 mb-3 text-4xl font-bold">Tabs</h2>
         </header>
         <TabsExample />
+      </section>
+      <section>
+        <header>
+          <h2 className="mt-9 mb-3 text-4xl font-bold">Timeline</h2>
+        </header>
+        <TimelineExample />
       </section>
       <section>
         <header>
@@ -389,7 +402,7 @@ function AccordionExample(): JSX.Element {
 function AlertsExample(): JSX.Element {
   return (
     <Alert
-      color="green"
+      color="success"
       rounded={false}
       withBorderAccent
       onDismiss={console.log}
@@ -428,9 +441,9 @@ function AlertsExample(): JSX.Element {
 function AvatarExample(): JSX.Element {
   return (
     <Avatar
+      bordered
       img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
       rounded
-      bordered
     />
   );
 }
@@ -438,20 +451,20 @@ function AvatarExample(): JSX.Element {
 function BadgesExample(): JSX.Element {
   return (
     <div className="flex flex-wrap gap-2">
-      <Badge color="blue" size="sm">
-        Default
+      <Badge color="info" size="sm">
+        Info
       </Badge>
       <Badge color="gray" size="sm">
-        Dark
+        Gray
       </Badge>
-      <Badge color="red" size="sm">
-        Red
+      <Badge color="failure" size="sm">
+        Failure
       </Badge>
-      <Badge color="green" size="sm">
-        Green
+      <Badge color="success" size="sm">
+        Success
       </Badge>
-      <Badge color="yellow" size="sm">
-        Yellow
+      <Badge color="warning" size="sm">
+        Warning
       </Badge>
       <Badge color="indigo" size="sm">
         Indigo
@@ -482,25 +495,25 @@ function ButtonsExample(): JSX.Element {
   return (
     <div className="flex flex-wrap items-center gap-2">
       <Button outline gradientDuoTone="purpleToBlue">
-        Purple to Blue
+        Purple to blue
       </Button>
       <Button outline gradientDuoTone="cyanToBlue">
-        Cyan to Blue
+        Cyan to blue
       </Button>
       <Button outline gradientDuoTone="greenToBlue">
-        Green to Blue
+        Green to blue
       </Button>
       <Button outline gradientDuoTone="purpleToPink">
-        Purple to Pink
+        Purple to pink
       </Button>
       <Button outline gradientDuoTone="pinkToOrange">
-        Pink to Orange
+        Pink to orange
       </Button>
       <Button outline gradientDuoTone="tealToLime">
-        Teal to Lime
+        Teal to lime
       </Button>
       <Button outline gradientDuoTone="redToYellow">
-        Red to Yellow
+        Red to yellow
       </Button>
     </div>
   );
@@ -509,13 +522,13 @@ function ButtonsExample(): JSX.Element {
 function ButtonGroupExample(): JSX.Element {
   return (
     <Button.Group>
-      <Button color="alternative">
+      <Button color="gray">
         <HiUserCircle className="mr-3 h-4 w-4" /> Profile
       </Button>
-      <Button color="alternative">
+      <Button color="gray">
         <HiAdjustments className="mr-3 h-4 w-4" /> Settings
       </Button>
-      <Button color="alternative">
+      <Button color="gray">
         <HiCloudDownload className="mr-3 h-4 w-4" /> Messages
       </Button>
     </Button.Group>
@@ -543,43 +556,25 @@ function CardExample(): JSX.Element {
 
 function CarouselExample(): JSX.Element {
   return (
-    <Carousel>
-      <Image
-        alt="..."
-        layout="raw"
-        height="100%"
-        width="100%"
-        src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-      />
-      <Image
-        alt="..."
-        layout="raw"
-        height="100%"
-        width="100%"
-        src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-      />
-      <Image
-        alt="..."
-        layout="raw"
-        height="100%"
-        width="100%"
-        src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-      />
-      <Image
-        alt="..."
-        layout="raw"
-        height="100%"
-        width="100%"
-        src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
-      />
-      <Image
-        alt="..."
-        layout="raw"
-        height="100%"
-        width="100%"
-        src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-      />
-    </Carousel>
+    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+      <Carousel>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          alt="..."
+          src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          alt="..."
+          src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          alt="..."
+          src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+        />
+      </Carousel>
+    </div>
   );
 }
 
@@ -587,7 +582,7 @@ function DropdownExample(): JSX.Element {
   return (
     <Dropdown label="Dropdown button">
       <Dropdown.Header>
-        <span className="block text-sm">Bonnie Green</span>
+        <span className="block text-sm">Bonnie success</span>
         <span className="block truncate text-sm font-medium">
           name@flowbite.com
         </span>
@@ -605,9 +600,9 @@ function FormsExample(): JSX.Element {
   return (
     <form className="flex flex-col gap-4">
       <div>
-        <Label className="mb-2 block" htmlFor="email1">
-          Your email
-        </Label>
+        <div className="mb-2 block">
+          <Label htmlFor="email1">Your email</Label>
+        </div>
         <TextInput
           id="email1"
           type="email"
@@ -616,9 +611,9 @@ function FormsExample(): JSX.Element {
         />
       </div>
       <div>
-        <Label className="mb-2 block" htmlFor="password1">
-          Your password
-        </Label>
+        <div className="mb-2 block">
+          <Label htmlFor="password1">Your password</Label>
+        </div>
         <TextInput id="password1" type="password" required />
       </div>
       <div className="flex items-center gap-2">
@@ -632,88 +627,51 @@ function FormsExample(): JSX.Element {
 
 function FooterExample(): JSX.Element {
   return (
-    <Footer className="flex flex-col">
-      <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-        <div>
-          <Footer.Brand
-            alt="Flowbite Logo"
-            href="https://flowbite.com"
-            name="Flowbite"
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="m-6"
-          />
-        </div>
-        <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+    <Footer container>
+      <div className="w-full">
+        <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
-              About
-            </h2>
-            <Footer.LinkGroup className="flex-col">
-              <Footer.Link className="mb-4" href="#">
-                Flowbite
-              </Footer.Link>
-              <Footer.Link className="mb-4" href="#">
-                Tailwind CSS
-              </Footer.Link>
-            </Footer.LinkGroup>
+            <Footer.Brand
+              href="https://flowbite.com"
+              src="https://flowbite.com/docs/images/logo.svg"
+              alt="Flowbite Logo"
+              name="Flowbite"
+            />
           </div>
-          <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
-              Follow us
-            </h2>
-            <Footer.LinkGroup className="flex-col">
-              <Footer.Link className="mb-4" href="#">
-                Gihub
-              </Footer.Link>
-              <Footer.Link className="mb-4" href="#">
-                Discord
-              </Footer.Link>
-            </Footer.LinkGroup>
-          </div>
-          <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
-              Legal
-            </h2>
-            <Footer.LinkGroup className="flex-col">
-              <Footer.Link className="mb-4" href="#">
-                Privacy Policy
-              </Footer.Link>
-              <Footer.Link className="mb-4" href="#">
-                Terms & Conditions
-              </Footer.Link>
-            </Footer.LinkGroup>
+          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+            <div>
+              <Footer.Title title="about" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Flowbite</Footer.Link>
+                <Footer.Link href="#">Tailwind CSS</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="Follow us" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Github</Footer.Link>
+                <Footer.Link href="#">Discord</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="Legal" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Privacy Policy</Footer.Link>
+                <Footer.Link href="#">Terms & Conditions</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
           </div>
         </div>
-      </div>
-      <hr className="mt-9 mb-3 w-full border-gray-200 p-1 dark:border-gray-700 sm:mx-auto lg:my-8" />
-      <div className="w-full sm:flex sm:items-center sm:justify-between">
-        <Footer.Copyright href="#" by="Flowbite™" year={2022} />
-        <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-          <Footer.Icon
-            href="#"
-            className="text-gray-400 hover:text-gray-900"
-            icon={HiAdjustments}
-          />
-          <Footer.Icon
-            href="#"
-            className="text-gray-400 hover:text-gray-900"
-            icon={HiArrowSmRight}
-          />
-          <Footer.Icon
-            href="#"
-            className="text-gray-400 hover:text-gray-900"
-            icon={HiChartPie}
-          />
-          <Footer.Icon
-            href="#"
-            className="text-gray-400 hover:text-gray-900"
-            icon={HiCloudDownload}
-          />
-          <Footer.Icon
-            href="#"
-            className="text-gray-400 hover:text-gray-900"
-            icon={HiEye}
-          />
+        <Footer.Divider />
+        <div className="w-full sm:flex sm:items-center sm:justify-between">
+          <Footer.Copyright href="#" by="Flowbite™" year={2022} />
+          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+            <Footer.Icon href="#" icon={BsFacebook} />
+            <Footer.Icon href="#" icon={BsInstagram} />
+            <Footer.Icon href="#" icon={BsTwitter} />
+            <Footer.Icon href="#" icon={BsGithub} />
+            <Footer.Icon href="#" icon={BsDribbble} />
+          </div>
         </div>
       </div>
     </Footer>
@@ -722,78 +680,54 @@ function FooterExample(): JSX.Element {
 
 function ListGroupExample(): JSX.Element {
   return (
-    <ListGroup className="w-48">
-      <ListGroup.Item active icon={HiUserCircle}>
-        Profile
-      </ListGroup.Item>
-      <ListGroup.Item icon={HiOutlineAdjustments}>Settings</ListGroup.Item>
-      <ListGroup.Item icon={HiInbox}>Messages</ListGroup.Item>
-      <ListGroup.Item icon={HiCloudDownload}>Download</ListGroup.Item>
-    </ListGroup>
+    <div className="w-48">
+      <ListGroup>
+        <ListGroup.Item active icon={HiUserCircle}>
+          Profile
+        </ListGroup.Item>
+        <ListGroup.Item icon={HiOutlineAdjustments}>Settings</ListGroup.Item>
+        <ListGroup.Item icon={HiInbox}>Messages</ListGroup.Item>
+        <ListGroup.Item icon={HiCloudDownload}>Download</ListGroup.Item>
+      </ListGroup>
+    </div>
   );
 }
 
 function ModalExample(): JSX.Element {
-  const [isOpen, setOpen] = useState(false);
+  // const [isOpen, setOpen] = useState(false);
 
   return (
     <>
-      <Button onClick={() => setOpen(true)}>Toggle modal</Button>
-      <Modal show={isOpen} size="md" popup onClose={() => setOpen(false)}>
-        <Modal.Header />
-        <Modal.Body className="space-y-6 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8">
-          <h3 className="text-xl font-medium text-gray-900 dark:text-white">
-            Sign in to our platform
-          </h3>
-          <div>
-            <Label className="mb-2 block" htmlFor="email">
-              Your email
-            </Label>
-            <TextInput
-              id="email"
-              className="dark:border-gray-500 dark:bg-gray-600"
-              placeholder="name@company.com"
-              required
-            />
-          </div>
-          <div>
-            <Label className="mb-2 block" htmlFor="password">
-              Your password
-            </Label>
-            <TextInput
-              id="password"
-              className="dark:border-gray-500 dark:bg-gray-600"
-              type="password"
-              required
-            />
-          </div>
-          <div className="flex justify-between">
-            <div className="flex items-center gap-2">
-              <Checkbox
-                id="remember"
-                className="dark:border-gray-500 dark:bg-gray-600"
-              />
-              <Label htmlFor="remember">Remember me</Label>
-            </div>
-            <a
-              href="/modal"
-              className="text-sm text-blue-700 hover:underline dark:text-blue-500"
-            >
-              Lost Password?
-            </a>
-          </div>
-          <Button className="w-full">Log in to your account</Button>
-          <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-            Not registered?{" "}
-            <a
-              href="/modal"
-              className="text-blue-700 hover:underline dark:text-blue-500"
-            >
-              Create account
-            </a>
+      <p>
+        This component doesn&apos;t work on <code>next</code> and{" "}
+        <code>react@18</code> due to a hydration mismatch.
+      </p>
+      {/* <Button onClick={() => setOpen(true)}>Toggle modal</Button>
+      <Modal show={isOpen} onClose={() => setOpen(false)}>
+        <Modal.Header>Terms of Service</Modal.Header>
+        <Modal.Body>
+          <div className="space-y-6">
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+              With less than a month to go before the European Union enacts new
+              consumer privacy laws for its citizens, companies around the world
+              are updating their terms of service agreements to comply.
+            </p>
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+              The European Union’s General Data Protection Regulation (G.D.P.R.)
+              goes into effect on May 25 and is meant to ensure a common set of
+              data rights in the European Union. It requires organizations to
+              notify users as soon as possible of high-risk data breaches that
+              could personally affect them.
+            </p>
           </div>
         </Modal.Body>
-      </Modal>
+        <Modal.Footer>
+          <Button onClick={() => setOpen(false)}>I accept</Button>
+          <Button color="gray" onClick={() => setOpen(false)}>
+            Decline
+          </Button>
+        </Modal.Footer>
+      </Modal> */}
     </>
   );
 }
@@ -803,19 +737,17 @@ function NavbarsExample(): JSX.Element {
     <Navbar fluid rounded>
       <Navbar.Brand href="https://flowbite.com/">
         <Image
-          alt="Flowbite Logo"
+          alt="Flowbite logo"
+          height="32"
           src="https://flowbite.com/docs/images/logo.svg"
-          height="16"
-          width="16"
-          className="mr-3"
+          width="32"
         />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+        <span className="self-center whitespace-nowrap pl-3 text-xl font-semibold dark:text-white">
           Flowbite
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
         <Dropdown
-          arrowIcon={false}
           inline
           label={
             <Avatar
@@ -853,12 +785,14 @@ function NavbarsExample(): JSX.Element {
 }
 
 function PaginationExample(): JSX.Element {
+  const [currentPage, setCurrentPage] = useState(1);
+
   return (
     <div className="flex items-center justify-center text-center">
       <Pagination
-        currentPage={1}
+        currentPage={currentPage}
         layout="table"
-        onPageChange={console.log}
+        onPageChange={(page: number) => setCurrentPage(page)}
         showIcons
         totalPages={1000}
       />
@@ -879,7 +813,7 @@ function ProgressExample(): JSX.Element {
 
 function RatingExample(): JSX.Element {
   return (
-    <>
+    <div className="flex flex-col justify-center gap-4">
       <Rating>
         <Rating.Star />
         <Rating.Star />
@@ -898,7 +832,7 @@ function RatingExample(): JSX.Element {
       <Rating.Advanced percentFilled={8}>3 star</Rating.Advanced>
       <Rating.Advanced percentFilled={4}>2 star</Rating.Advanced>
       <Rating.Advanced percentFilled={1}>1 star</Rating.Advanced>
-    </>
+    </div>
   );
 }
 
@@ -907,12 +841,8 @@ function SidebarExample(): JSX.Element {
 
   return (
     <>
-      <Button onClick={() => setOpen(true)}>Toggle sidebar</Button>
-      <Sidebar
-        aria-label="Example sidebar"
-        collapsed={isOpen}
-        className="!bg-gray-50"
-      >
+      <Button onClick={() => setOpen(!isOpen)}>Toggle sidebar</Button>
+      <Sidebar aria-label="Example sidebar" collapsed={isOpen}>
         <Sidebar.Items>
           <Sidebar.ItemGroup>
             <Sidebar.Item href="#" icon={HiChartPie}>
@@ -951,10 +881,10 @@ function SidebarExample(): JSX.Element {
 function SpinnersExample(): JSX.Element {
   return (
     <div className="flex flex-wrap gap-2">
-      <Spinner color="blue" aria-label="Blue spinner example" />
-      <Spinner color="green" aria-label="Green spinner example" />
-      <Spinner color="red" aria-label="Red spinner example" />
-      <Spinner color="yellow" aria-label="Yellow spinner example" />
+      <Spinner color="info" aria-label="info spinner example" />
+      <Spinner color="success" aria-label="success spinner example" />
+      <Spinner color="failure" aria-label="failure spinner example" />
+      <Spinner color="warning" aria-label="Yellow spinner example" />
       <Spinner color="pink" aria-label="Pink spinner example" />
       <Spinner color="purple" aria-label="Purple spinner example" />
     </div>
@@ -1042,7 +972,7 @@ function TablesExample(): JSX.Element {
           <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
             Apple Watch 5
           </Table.Cell>
-          <Table.Cell>Red</Table.Cell>
+          <Table.Cell>failure</Table.Cell>
           <Table.Cell>Wearables</Table.Cell>
           <Table.Cell>$999</Table.Cell>
           <Table.Cell>
@@ -1065,7 +995,7 @@ function TabsExample(): JSX.Element {
       <Tabs.Item title="Profile" icon={HiUserCircle}>
         Profile content
       </Tabs.Item>
-      <Tabs.Item active={true} title="Dashboard" icon={HiDatabase}>
+      <Tabs.Item active title="Dashboard" icon={HiDatabase}>
         Dashboard content
       </Tabs.Item>
       <Tabs.Item title="Settings" icon={HiAdjustments}>
@@ -1074,10 +1004,55 @@ function TabsExample(): JSX.Element {
       <Tabs.Item title="Contacts" icon={HiClipboardList}>
         Contacts content
       </Tabs.Item>
-      <Tabs.Item disabled={true} title="Disabled">
+      <Tabs.Item disabled title="Disabled">
         Disabled content
       </Tabs.Item>
     </Tabs.Group>
+  );
+}
+
+function TimelineExample(): JSX.Element {
+  return (
+    <Timeline>
+      <Timeline.Item>
+        <Timeline.Point />
+        <Timeline.Content>
+          <Timeline.Time>February 2022</Timeline.Time>
+          <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
+          <Timeline.Body>
+            Get access to over 20+ pages including a dashboard layout, charts,
+            kanban board, calendar, and pre-order E-commerce & Marketing pages.
+          </Timeline.Body>
+          <Button color="gray">
+            Learn More
+            <HiArrowNarrowRight className="ml-2 h-3 w-3" />
+          </Button>
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Point />
+        <Timeline.Content>
+          <Timeline.Time>March 2022</Timeline.Time>
+          <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
+          <Timeline.Body>
+            All of the pages and components are first designed in Figma and we
+            keep a parity between the two versions even as we update the
+            project.
+          </Timeline.Body>
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Point />
+        <Timeline.Content>
+          <Timeline.Time>April 2022</Timeline.Time>
+          <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
+          <Timeline.Body>
+            Get started with dozens of web components and interactive elements
+            built on top of Tailwind CSS.
+          </Timeline.Body>
+        </Timeline.Content>
+      </Timeline.Item>
+    </Timeline>
   );
 }
 
