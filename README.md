@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Live demo: [https://flowbite-next-starter.vercel.app/](https://flowbite-next-starter.vercel.app/)
+
 It also includes:
 
 - [x] [`flowbite`](https://flowbite.com)
