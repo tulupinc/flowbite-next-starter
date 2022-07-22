@@ -9,6 +9,7 @@ const nextConfig = {
     domains: ["flowbite.com"],
   },
   reactStrictMode: true,
+  swcMinify: true,
 };
 
 module.exports = nextConfig;
