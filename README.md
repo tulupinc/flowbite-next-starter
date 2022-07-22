@@ -36,6 +36,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
+## Outstanding Issues
+
+- **Carousel**s don't seem to work with [`next/image`](https://nextjs.org/docs/api-reference/next/image), so a normal `<img/>` is required, which ESLint will warn about
+- **Modal**s don't work on `next` on `react@18` because of an hydration mismatch
+
 ## Learn More
 
 ### About Next.js
