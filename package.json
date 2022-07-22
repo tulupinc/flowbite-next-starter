@@ -1,7 +1,14 @@
 {
   "name": "flowbite-next-starter",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.0",
+  "homepage": "https://github.com/tulupinc/flowbite-next-starter",
+  "bugs": "https://github.com/tulupinc/flowbite-next-starter/issues",
+  "license": "MIT",
+  "author": "Conner Davis <conner@tulup.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tulupinc/flowbite-next-starter.git"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -13,7 +20,6 @@
     "flowbite": "^1.5.1",
     "flowbite-react": "^0.1.3",
     "next": "^12.2.2",
-    "prettier": "^2.7.1",
     "react": "18",
     "react-dom": "18",
     "react-icons": "^4.4.0"
@@ -21,14 +27,18 @@
   "devDependencies": {
     "@types/node": "^18.0.6",
     "@types/react": "18",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
     "autoprefixer": "10.4.7",
     "eslint": "^8.20.0",
     "eslint-config-next": "^12.2.2",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-tailwindcss": "^3.6.0",
     "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
     "tailwindcss": "^3.1.6",
     "typescript": "^4.7.4"
@@ -43,23 +53,15 @@
       "eslint:recommended",
       "next/core-web-vitals",
       "plugin:jsx-a11y/recommended",
-      "plugin:react/jsx-runtime",
+      "plugin:prettier/recommended",
       "plugin:react/recommended",
       "plugin:tailwindcss/recommended",
       "prettier"
     ],
-    "ignorePatterns": [
-      "*.config.js"
-    ],
     "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "project": "./tsconfig.json"
-    },
     "plugins": [
       "jsx-a11y",
+      "prettier",
       "react",
       "tailwindcss"
     ],
