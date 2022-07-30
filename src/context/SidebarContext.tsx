@@ -2,16 +2,13 @@ import type { PropsWithChildren } from "react";
 import { createContext, useContext, useEffect, useState } from "react";
 
 interface SidebarContextProps {
-  isPageWithSidebar: boolean;
   isOpenOnSmallScreens: boolean;
-  setOpenOnSmallScreens: (to: boolean) => void;
+  isPageWithSidebar: boolean;
+  // eslint-disable-next-line no-unused-vars
+  setOpenOnSmallScreens: (isOpen: boolean) => void;
 }
 
-const SidebarContext = createContext<SidebarContextProps>({
-  isPageWithSidebar: false,
-  isOpenOnSmallScreens: false,
-  setOpenOnSmallScreens: () => undefined,
-});
+const SidebarContext = createContext<SidebarContextProps>(undefined!);
 
 export function SidebarProvider({
   children,
