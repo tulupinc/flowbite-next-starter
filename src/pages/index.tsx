@@ -16,6 +16,7 @@ import {
   Pagination,
   Progress,
   Rating,
+  Sidebar as FlowbiteSidebar,
   Spinner,
   Table,
   Tabs,
@@ -70,7 +71,7 @@ export default function Index(): JSX.Element {
       </Head>
       <SidebarProvider>
         <Header />
-        <div className="flex">
+        <div className="flex dark:bg-gray-900">
           <main className="order-2 mx-4 mt-4 mb-24 flex-[1_0_16rem]">
             <HomePage />
           </main>
@@ -138,127 +139,167 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mb-3 text-4xl font-bold">Alert</h2>
+          <h2 className="mb-3 text-4xl font-bold dark:text-gray-200">Alert</h2>
         </header>
         <AlertsExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Accordion</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Accordion
+          </h2>
         </header>
         <AccordionExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Avatar</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Avatar
+          </h2>
         </header>
         <AvatarExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Badges</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Badges
+          </h2>
         </header>
         <BadgesExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Breadcrumb</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Breadcrumb
+          </h2>
         </header>
         <BreadcrumbExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Buttons</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Buttons
+          </h2>
         </header>
         <ButtonsExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Button group</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Button group
+          </h2>
         </header>
         <ButtonGroupExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Card</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Card
+          </h2>
         </header>
         <CardExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Carousel</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Carousel
+          </h2>
         </header>
         <CarouselExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Dropdown</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Dropdown
+          </h2>
         </header>
         <DropdownExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Forms</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Forms
+          </h2>
         </header>
         <FormsExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Footer</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Footer
+          </h2>
         </header>
         <FooterExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">List group</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            List group
+          </h2>
         </header>
         <ListGroupExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Modal</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Modal
+          </h2>
         </header>
         <ModalExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Navbars</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Navbars
+          </h2>
         </header>
         <NavbarsExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Pagination</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Pagination
+          </h2>
         </header>
         <PaginationExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Progress</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Progress
+          </h2>
         </header>
         <ProgressExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Rating</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Rating
+          </h2>
         </header>
         <RatingExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Sidebar</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Sidebar
+          </h2>
         </header>
         <SidebarExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Spinners</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Spinners
+          </h2>
         </header>
         <SpinnersExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Tables</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Tables
+          </h2>
         </header>
         <div className="max-w-full overflow-x-scroll">
           <TablesExample />
@@ -266,25 +307,33 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Tabs</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Tabs
+          </h2>
         </header>
         <TabsExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Timeline</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Timeline
+          </h2>
         </header>
         <TimelineExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Toast</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Toast
+          </h2>
         </header>
         <ToastExample />
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold">Tooltips</h2>
+          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+            Tooltips
+          </h2>
         </header>
         <TooltipsExample />
       </section>
@@ -680,7 +729,7 @@ function ModalExample(): JSX.Element {
 
   return (
     <>
-      <p>
+      <p className="text-white">
         This component doesn&apos;t work on <code>next</code> and{" "}
         <code>react@18</code> due to a hydration mismatch.
       </p>
@@ -820,42 +869,51 @@ function RatingExample(): JSX.Element {
 
 function SidebarExample(): JSX.Element {
   const [isOpen, setOpen] = useState(false);
+  console.log(isOpen);
+
+  function toggle() {
+    setOpen(!isOpen);
+  }
 
   return (
     <>
-      <Button onClick={() => setOpen(!isOpen)}>Toggle sidebar</Button>
-      <Sidebar aria-label="Example sidebar" collapsed={isOpen}>
-        <Sidebar.Items>
-          <Sidebar.ItemGroup>
-            <Sidebar.Item href="#" icon={HiChartPie}>
-              Dashboard
-            </Sidebar.Item>
-            <Sidebar.Item
-              href="#"
-              icon={HiViewBoards}
-              label="Pro"
-              labelColor="gray"
-            >
-              Kanban
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiInbox} label="3">
-              Inbox
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiUser}>
-              Users
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiShoppingBag}>
-              Products
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiArrowSmRight}>
-              Sign In
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiTable}>
-              Sign Up
-            </Sidebar.Item>
-          </Sidebar.ItemGroup>
-        </Sidebar.Items>
-      </Sidebar>
+      <Button color="warning" onClick={toggle}>
+        Toggle sidebar
+      </Button>
+      <div className="my-6 h-96">
+        <FlowbiteSidebar aria-label="Example sidebar" collapsed={isOpen}>
+          <FlowbiteSidebar.Items>
+            <FlowbiteSidebar.ItemGroup>
+              <FlowbiteSidebar.Item href="#" icon={HiChartPie}>
+                Dashboard
+              </FlowbiteSidebar.Item>
+              <FlowbiteSidebar.Item
+                href="#"
+                icon={HiViewBoards}
+                label="Pro"
+                labelColor="gray"
+              >
+                Kanban
+              </FlowbiteSidebar.Item>
+              <FlowbiteSidebar.Item href="#" icon={HiInbox} label="3">
+                Inbox
+              </FlowbiteSidebar.Item>
+              <FlowbiteSidebar.Item href="#" icon={HiUser}>
+                Users
+              </FlowbiteSidebar.Item>
+              <FlowbiteSidebar.Item href="#" icon={HiShoppingBag}>
+                Products
+              </FlowbiteSidebar.Item>
+              <FlowbiteSidebar.Item href="#" icon={HiArrowSmRight}>
+                Sign In
+              </FlowbiteSidebar.Item>
+              <FlowbiteSidebar.Item href="#" icon={HiTable}>
+                Sign Up
+              </FlowbiteSidebar.Item>
+            </FlowbiteSidebar.ItemGroup>
+          </FlowbiteSidebar.Items>
+        </FlowbiteSidebar>
+      </div>
     </>
   );
 }
