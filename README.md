@@ -89,18 +89,12 @@ module.exports = {
 };
 ```
 
-#### And `styles/globals.css`:
+#### And replace the contents of `styles/globals.css` by:
 
 ```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-```
-
-#### Import `tailwindcss` stylesheet via [`pages/_app.tsx`](https://nextjs.org/docs/advanced-features/custom-app):
-
-```js
-import "../styles/globals.css";
 ```
 
 #### Start using `flowbite-react`!
