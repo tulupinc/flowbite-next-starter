@@ -61,7 +61,7 @@ cd my-app
 npm install --save autoprefixer postcss tailwindcss flowbite flowbite-react
 ```
 
-### Create `postcss.config.js`:
+#### Create `postcss.config.js`:
 
 ```js
 module.exports = {
