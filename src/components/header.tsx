@@ -1,4 +1,4 @@
-import { Navbar } from "flowbite-react";
+import { DarkThemeToggle, Navbar } from "flowbite-react";
 import Image from "next/image";
 import { FC } from "react";
 import { useSidebarContext } from "../context/SidebarContext";
@@ -59,6 +59,7 @@ const Header: FC<Record<string, never>> = function () {
         </Navbar.Brand>
         <div className="flex md:order-2">
           <Navbar.Toggle />
+          <DarkThemeToggle />
         </div>
         <Navbar.Collapse>
           <Navbar.Link href="/" active>
