@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "flowbite": "^1.5.1",
-    "flowbite-react": "^0.1.3",
+    "flowbite-react": "^0.1.5",
     "next": "^12.2.3",
     "react": "18",
     "react-dom": "18",
@@ -30,7 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "@typescript-eslint/parser": "^5.31.0",
     "autoprefixer": "10.4.8",
-    "eslint": "^8.20.0",
+    "eslint": "^8.21.0",
     "eslint-config-next": "^12.2.3",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",

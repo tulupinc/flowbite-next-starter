@@ -869,7 +869,6 @@ function RatingExample(): JSX.Element {
 
 function SidebarExample(): JSX.Element {
   const [isOpen, setOpen] = useState(false);
-  console.log(isOpen);
 
   function toggle() {
     setOpen(!isOpen);
