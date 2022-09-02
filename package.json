@@ -17,7 +17,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "flowbite": "^1.5.1",
+    "flowbite": "^1.5.2",
     "flowbite-react": "^0.1.5",
     "next": "^12.2.3",
     "react": "18",
