@@ -19,7 +19,7 @@
   "dependencies": {
     "flowbite": "^1.5.1",
     "flowbite-react": "^0.1.5",
-    "next": "^12.2.3",
+    "next": "^12.3.0",
     "react": "18",
     "react-dom": "18",
     "react-icons": "^4.4.0"
