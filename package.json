@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "flowbite": "^1.5.1",
-    "flowbite-react": "^0.1.5",
+    "flowbite-react": "^0.2.1",
     "next": "^12.2.3",
     "react": "18",
     "react-dom": "18",
