@@ -12,6 +12,7 @@ import {
   Footer,
   Label,
   ListGroup,
+  Modal,
   Navbar,
   Pagination,
   Progress,
@@ -129,10 +130,10 @@ function ActualSidebar(): JSX.Element {
 
 function HomePage(): JSX.Element {
   return (
-    <>
+    <div className="p-6">
       <section>
         <header>
-          <h1 className="mb-6 text-5xl font-extrabold">
+          <h1 className="mb-6 text-5xl font-extrabold dark:text-white">
             Welcome to <code>Flowbite</code> on <code>Next.js</code>!
           </h1>
         </header>
@@ -337,7 +338,7 @@ function HomePage(): JSX.Element {
         </header>
         <TooltipsExample />
       </section>
-    </>
+    </div>
   );
 }
 
@@ -725,15 +726,11 @@ function ListGroupExample(): JSX.Element {
 }
 
 function ModalExample(): JSX.Element {
-  // const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <>
-      <p className="text-white">
-        This component doesn&apos;t work on <code>next</code> and{" "}
-        <code>react@18</code> due to a hydration mismatch.
-      </p>
-      {/* <Button onClick={() => setOpen(true)}>Toggle modal</Button>
+      <Button onClick={() => setOpen(true)}>Toggle modal</Button>
       <Modal show={isOpen} onClose={() => setOpen(false)}>
         <Modal.Header>Terms of Service</Modal.Header>
         <Modal.Body>
@@ -758,7 +755,7 @@ function ModalExample(): JSX.Element {
             Decline
           </Button>
         </Modal.Footer>
-      </Modal> */}
+      </Modal>
     </>
   );
 }

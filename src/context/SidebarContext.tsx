@@ -62,7 +62,7 @@ function isSmallScreen(): boolean {
 }
 
 export function useSidebarContext(): SidebarContextProps {
-  const context = useContext(SidebarContext);
+  const context = useContext(SidebarContext) as SidebarContextProps | undefined;
 
   if (!context) {
     throw new Error(

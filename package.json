@@ -36,6 +36,7 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-tailwindcss": "^3.7.0",
     "postcss": "^8.4.19",
     "prettier": "^2.8.0",
@@ -52,19 +53,20 @@
     "extends": [
       "eslint:recommended",
       "next/core-web-vitals",
+      "plugin:@typescript-eslint/strict",
       "plugin:jsx-a11y/recommended",
       "plugin:prettier/recommended",
       "plugin:react/recommended",
-      "plugin:tailwindcss/recommended",
-      "prettier"
+      "plugin:react-hooks/recommended",
+      "plugin:tailwindcss/recommended"
     ],
     "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "jsx-a11y",
-      "prettier",
-      "react",
-      "tailwindcss"
-    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "project": "./tsconfig.json"
+    },
     "root": true,
     "rules": {
       "no-undef": "off",
