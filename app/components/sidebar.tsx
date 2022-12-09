@@ -1,5 +1,3 @@
-"use client";
-
 import classNames from "classnames";
 import { Sidebar as FlowbiteSidebar } from "flowbite-react";
 import type { FC, PropsWithChildren } from "react";

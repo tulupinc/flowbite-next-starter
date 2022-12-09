@@ -1,5 +1,3 @@
-"use client";
-
 import { FC, PropsWithChildren } from "react";
 import FlowbiteContext from "./context/FlowbiteContext";
 import "./globals.css";

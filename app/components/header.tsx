@@ -1,5 +1,3 @@
-"use client";
-
 import { DarkThemeToggle, Navbar } from "flowbite-react";
 import Image from "next/image";
 import { FC } from "react";
