@@ -19,7 +19,7 @@ import {
   Pagination,
   Progress,
   Rating,
-  Sidebar as FlowbiteSidebar,
+  Sidebar,
   Spinner,
   Table,
   Tabs,
@@ -28,9 +28,10 @@ import {
   Toast,
   Tooltip,
 } from "flowbite-react";
+import type { NextPage } from "next";
 import Image from "next/image";
+import type { FC } from "react";
 import React, { useState } from "react";
-import { BiBuoy } from "react-icons/bi";
 import {
   BsDribbble,
   BsFacebook,
@@ -59,70 +60,8 @@ import {
   HiViewBoards,
   HiX,
 } from "react-icons/hi";
-import Header from "./components/header";
-import Sidebar from "./components/sidebar";
-import { SidebarProvider } from "./context/SidebarContext";
 
-export default function Index(): JSX.Element {
-  return (
-    <SidebarProvider>
-      <Header />
-      <div className="flex dark:bg-gray-900">
-        <main className="order-2 mx-4 mb-24 mt-4 flex-[1_0_16rem]">
-          <HomePage />
-        </main>
-        <div className="order-1">
-          <ActualSidebar />
-        </div>
-      </div>
-    </SidebarProvider>
-  );
-}
-
-function ActualSidebar(): JSX.Element {
-  return (
-    <Sidebar>
-      <Sidebar.Items>
-        <Sidebar.ItemGroup>
-          <Sidebar.Item href="#" icon={HiChartPie}>
-            Dashboard
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiViewBoards}>
-            Kanban
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiInbox}>
-            Inbox
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiUser}>
-            Users
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiShoppingBag}>
-            Products
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiArrowSmRight}>
-            Sign In
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiTable}>
-            Sign Up
-          </Sidebar.Item>
-        </Sidebar.ItemGroup>
-        <Sidebar.ItemGroup>
-          <Sidebar.Item href="#" icon={HiChartPie}>
-            Upgrade to Pro
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiViewBoards}>
-            Documentation
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={BiBuoy}>
-            Help
-          </Sidebar.Item>
-        </Sidebar.ItemGroup>
-      </Sidebar.Items>
-    </Sidebar>
-  );
-}
-
-function HomePage(): JSX.Element {
+export const HomePageContent: NextPage = function () {
   return (
     <div className="p-6">
       <section>
@@ -334,9 +273,9 @@ function HomePage(): JSX.Element {
       </section>
     </div>
   );
-}
+};
 
-function AccordionExample(): JSX.Element {
+const AccordionExample: FC = function () {
   return (
     <Accordion flush>
       <Accordion.Panel>
@@ -348,15 +287,15 @@ function AccordionExample(): JSX.Element {
             navbars, and more.
           </p>
           <p className="text-gray-500 dark:text-gray-400">
-            Check out this guide to learn how to{" "}
+            Check out this guide to learn how to&nbsp;
             <a
               href="https://flowbite.com/docs/getting-started/introduction/"
               className="text-blue-600 hover:underline dark:text-blue-500"
             >
               get started
-            </a>{" "}
-            and start developing websites even faster with components on top of
-            Tailwind CSS.
+            </a>
+            &nbsp;and start developing websites even faster with components on
+            top of Tailwind CSS.
           </p>
         </Accordion.Content>
       </Accordion.Panel>
@@ -369,15 +308,15 @@ function AccordionExample(): JSX.Element {
             equivalent in our Figma file.
           </p>
           <p className="text-gray-500 dark:text-gray-400">
-            Check out the{" "}
+            Check out the&nbsp;
             <a
               href="https://flowbite.com/figma/"
               className="text-blue-600 hover:underline dark:text-blue-500"
             >
               Figma design system
-            </a>{" "}
-            based on the utility classes from Tailwind CSS and components from
-            Flowbite.
+            </a>
+            &nbsp;based on the utility classes from Tailwind CSS and components
+            from Flowbite.
           </p>
         </Accordion.Content>
       </Accordion.Panel>
@@ -423,9 +362,9 @@ function AccordionExample(): JSX.Element {
       </Accordion.Panel>
     </Accordion>
   );
-}
+};
 
-function AlertsExample(): JSX.Element {
+const AlertsExample: FC = function () {
   return (
     <Alert
       color="success"
@@ -462,19 +401,13 @@ function AlertsExample(): JSX.Element {
       </h3>
     </Alert>
   );
-}
+};
 
-function AvatarExample(): JSX.Element {
-  return (
-    <Avatar
-      bordered
-      img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-      rounded
-    />
-  );
-}
+const AvatarExample: FC = function () {
+  return <Avatar bordered img="/profile-picture-5.jpg" rounded />;
+};
 
-function BadgesExample(): JSX.Element {
+const BadgesExample: FC = function () {
   return (
     <div className="flex flex-wrap gap-2">
       <Badge color="info" size="sm">
@@ -503,9 +436,9 @@ function BadgesExample(): JSX.Element {
       </Badge>
     </div>
   );
-}
+};
 
-function BreadcrumbExample(): JSX.Element {
+const BreadcrumbExample: FC = function () {
   return (
     <Breadcrumb aria-label="Default breadcrumb example">
       <Breadcrumb.Item href="#" icon={HiHome}>
@@ -515,9 +448,9 @@ function BreadcrumbExample(): JSX.Element {
       <Breadcrumb.Item>Flowbite React</Breadcrumb.Item>
     </Breadcrumb>
   );
-}
+};
 
-function ButtonsExample(): JSX.Element {
+const ButtonsExample: FC = function () {
   return (
     <div className="flex flex-wrap items-center gap-2">
       <Button outline gradientDuoTone="purpleToBlue">
@@ -543,9 +476,9 @@ function ButtonsExample(): JSX.Element {
       </Button>
     </div>
   );
-}
+};
 
-function ButtonGroupExample(): JSX.Element {
+const ButtonGroupExample: FC = function () {
   return (
     <Button.Group>
       <Button color="gray">
@@ -559,14 +492,14 @@ function ButtonGroupExample(): JSX.Element {
       </Button>
     </Button.Group>
   );
-}
+};
 
-function CardExample(): JSX.Element {
+const CardExample: FC = function () {
   return (
     <div className="max-w-sm">
       <Card
         imgAlt="Meaningful alt text for an image that is not purely decorative"
-        imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
+        imgSrc="/image-1.jpg"
       >
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           Noteworthy technology acquisitions 2021
@@ -578,33 +511,24 @@ function CardExample(): JSX.Element {
       </Card>
     </div>
   );
-}
+};
 
-function CarouselExample(): JSX.Element {
+const CarouselExample: FC = function () {
   return (
     <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
       <Carousel>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          alt="..."
-          src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-        />
+        <img alt="" src="/carousel-1.svg" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          alt="..."
-          src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-        />
+        <img alt="" src="/carousel-2.svg" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          alt="..."
-          src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-        />
+        <img alt="" src="/carousel-3.svg" />
       </Carousel>
     </div>
   );
-}
+};
 
-function DropdownExample(): JSX.Element {
+const DropdownExample: FC = function () {
   return (
     <Dropdown label="Dropdown button">
       <Dropdown.Header>
@@ -620,9 +544,9 @@ function DropdownExample(): JSX.Element {
       <Dropdown.Item>Sign out</Dropdown.Item>
     </Dropdown>
   );
-}
+};
 
-function FormsExample(): JSX.Element {
+const FormsExample: FC = function () {
   return (
     <form className="flex flex-col gap-4">
       <div>
@@ -649,9 +573,9 @@ function FormsExample(): JSX.Element {
       <Button type="submit">Submit</Button>
     </form>
   );
-}
+};
 
-function FooterExample(): JSX.Element {
+const FooterExample: FC = function () {
   return (
     <Footer container>
       <div className="w-full">
@@ -659,7 +583,7 @@ function FooterExample(): JSX.Element {
           <div>
             <Footer.Brand
               href="https://flowbite.com"
-              src="https://flowbite.com/docs/images/logo.svg"
+              src="/favicon.png"
               alt="Flowbite Logo"
               name="Flowbite"
             />
@@ -702,9 +626,9 @@ function FooterExample(): JSX.Element {
       </div>
     </Footer>
   );
-}
+};
 
-function ListGroupExample(): JSX.Element {
+const ListGroupExample: FC = function () {
   return (
     <div className="w-48">
       <ListGroup>
@@ -717,9 +641,9 @@ function ListGroupExample(): JSX.Element {
       </ListGroup>
     </div>
   );
-}
+};
 
-function ModalExample(): JSX.Element {
+const ModalExample: FC = function () {
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -752,18 +676,13 @@ function ModalExample(): JSX.Element {
       </Modal>
     </>
   );
-}
+};
 
-function NavbarsExample(): JSX.Element {
+const NavbarsExample: FC = function () {
   return (
     <Navbar fluid rounded>
       <Navbar.Brand href="https://flowbite.com/">
-        <Image
-          alt="Flowbite logo"
-          height="32"
-          src="https://flowbite.com/docs/images/logo.svg"
-          width="32"
-        />
+        <Image alt="Flowbite logo" height="32" src="/favicon.png" width="32" />
         <span className="self-center whitespace-nowrap pl-3 text-xl font-semibold dark:text-white">
           Flowbite
         </span>
@@ -772,11 +691,7 @@ function NavbarsExample(): JSX.Element {
         <Dropdown
           inline
           label={
-            <Avatar
-              alt="User settings"
-              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-              rounded
-            />
+            <Avatar alt="User settings" img="/profile-picture-5.jpg" rounded />
           }
         >
           <Dropdown.Header>
@@ -804,9 +719,9 @@ function NavbarsExample(): JSX.Element {
       </Navbar.Collapse>
     </Navbar>
   );
-}
+};
 
-function PaginationExample(): JSX.Element {
+const PaginationExample: FC = function () {
   const [currentPage, setCurrentPage] = useState(1);
 
   return (
@@ -820,20 +735,20 @@ function PaginationExample(): JSX.Element {
       />
     </div>
   );
-}
+};
 
-function ProgressExample(): JSX.Element {
+const ProgressExample: FC = function () {
   return (
     <Progress
-      progress={45}
-      label="Flowbite"
-      labelPosition="outside"
       labelProgress
+      progress={45}
+      textLabel="Flowbite"
+      textLabelPosition="outside"
     />
   );
-}
+};
 
-function RatingExample(): JSX.Element {
+const RatingExample: FC = function () {
   return (
     <div className="flex flex-col justify-center gap-4">
       <Rating>
@@ -856,9 +771,9 @@ function RatingExample(): JSX.Element {
       <Rating.Advanced percentFilled={1}>1 star</Rating.Advanced>
     </div>
   );
-}
+};
 
-function SidebarExample(): JSX.Element {
+const SidebarExample: FC = function () {
   const [isOpen, setOpen] = useState(false);
 
   function toggle() {
@@ -871,44 +786,44 @@ function SidebarExample(): JSX.Element {
         Toggle sidebar
       </Button>
       <div className="my-6 h-96">
-        <FlowbiteSidebar aria-label="Example sidebar" collapsed={isOpen}>
-          <FlowbiteSidebar.Items>
-            <FlowbiteSidebar.ItemGroup>
-              <FlowbiteSidebar.Item href="#" icon={HiChartPie}>
+        <Sidebar aria-label="Example sidebar" collapsed={isOpen}>
+          <Sidebar.Items>
+            <Sidebar.ItemGroup>
+              <Sidebar.Item href="#" icon={HiChartPie}>
                 Dashboard
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item
+              </Sidebar.Item>
+              <Sidebar.Item
                 href="#"
                 icon={HiViewBoards}
                 label="Pro"
                 labelColor="gray"
               >
                 Kanban
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item href="#" icon={HiInbox} label="3">
+              </Sidebar.Item>
+              <Sidebar.Item href="#" icon={HiInbox} label="3">
                 Inbox
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item href="#" icon={HiUser}>
+              </Sidebar.Item>
+              <Sidebar.Item href="#" icon={HiUser}>
                 Users
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item href="#" icon={HiShoppingBag}>
+              </Sidebar.Item>
+              <Sidebar.Item href="#" icon={HiShoppingBag}>
                 Products
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item href="#" icon={HiArrowSmRight}>
+              </Sidebar.Item>
+              <Sidebar.Item href="#" icon={HiArrowSmRight}>
                 Sign In
-              </FlowbiteSidebar.Item>
-              <FlowbiteSidebar.Item href="#" icon={HiTable}>
+              </Sidebar.Item>
+              <Sidebar.Item href="#" icon={HiTable}>
                 Sign Up
-              </FlowbiteSidebar.Item>
-            </FlowbiteSidebar.ItemGroup>
-          </FlowbiteSidebar.Items>
-        </FlowbiteSidebar>
+              </Sidebar.Item>
+            </Sidebar.ItemGroup>
+          </Sidebar.Items>
+        </Sidebar>
       </div>
     </>
   );
-}
+};
 
-function SpinnersExample(): JSX.Element {
+const SpinnersExample: FC = function () {
   return (
     <div className="flex flex-wrap gap-2">
       <Spinner color="info" aria-label="info spinner example" />
@@ -919,9 +834,9 @@ function SpinnersExample(): JSX.Element {
       <Spinner color="purple" aria-label="Purple spinner example" />
     </div>
   );
-}
+};
 
-function TablesExample(): JSX.Element {
+const TablesExample: FC = function () {
   return (
     <Table striped>
       <Table.Head>
@@ -1017,11 +932,11 @@ function TablesExample(): JSX.Element {
       </Table.Body>
     </Table>
   );
-}
+};
 
-function TabsExample(): JSX.Element {
+const TabsExample: FC = function () {
   return (
-    <Tabs.Group aria-label="Tabs with icons" style="underline">
+    <Tabs aria-label="Tabs with icons" style="underline">
       <Tabs.Item title="Profile" icon={HiUserCircle}>
         Profile content
       </Tabs.Item>
@@ -1037,11 +952,11 @@ function TabsExample(): JSX.Element {
       <Tabs.Item disabled title="Disabled">
         Disabled content
       </Tabs.Item>
-    </Tabs.Group>
+    </Tabs>
   );
-}
+};
 
-function TimelineExample(): JSX.Element {
+const TimelineExample: FC = function () {
   return (
     <Timeline>
       <Timeline.Item>
@@ -1084,9 +999,9 @@ function TimelineExample(): JSX.Element {
       </Timeline.Item>
     </Timeline>
   );
-}
+};
 
-function ToastExample(): JSX.Element {
+const ToastExample: FC = function () {
   return (
     <div className="flex flex-col gap-4">
       <Toast>
@@ -1114,9 +1029,9 @@ function ToastExample(): JSX.Element {
       </Toast>
     </div>
   );
-}
+};
 
-function TooltipsExample(): JSX.Element {
+const TooltipsExample: FC = function () {
   return (
     <div className="flex gap-2">
       <Tooltip content="Tooltip content" placement="top">
@@ -1133,4 +1048,4 @@ function TooltipsExample(): JSX.Element {
       </Tooltip>
     </div>
   );
-}
+};

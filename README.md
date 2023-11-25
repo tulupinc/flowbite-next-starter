@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) 14.x project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Live demo: [https://flowbite-next-starter.vercel.app/](https://flowbite-next-starter.vercel.app/)
 
@@ -10,28 +10,23 @@ It also includes:
 - [x] [`tailwindcss`](https://tailwindcss.com)
 - [x] Quality of life tools, like
   - [x] [`eslint`](https://eslint.org) with some plugins
-  - [x] [`prettier`](https://prettier.io)
+  - [x] [`prettier`](https://prettier.io) with some plugins
+  - [x] [`tailwind-merge`](https://github.com/dcastil/tailwind-merge)
 
 ## Getting started
 
 `Next.js` requires [`Node.js`](https://nodejs.org).
 
-If you don't already have `npm` and `yarn` available, make sure you set them up.
-
-```bash
-npm i -g npm yarn
-```
-
 Install the dependencies:
 
 ```bash
-yarn install
+npm i
 ```
 
 Now you can run the development server:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -58,10 +53,11 @@ cd my-app
 #### Install `tailwindcss` and `flowbite-react`:
 
 ```sh
-npm install --save autoprefixer postcss tailwindcss flowbite flowbite-react
+npm i --save-dev autoprefixer postcss
+npm i --save tailwindcss flowbite-react
 ```
 
-#### Create `postcss.config.js`:
+#### Create `postcss.config.cjs`:
 
 ```js
 module.exports = {
@@ -72,24 +68,21 @@ module.exports = {
 };
 ```
 
-#### Create `tailwind.config.js`:
+#### Create `tailwind.config.ts`:
 
 ```js
-/**
- * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
- */
-module.exports = {
-  content: [
-    "./node_modules/flowbite-react/**/*.js",
-    "./pages/**/*.{ts,tsx}",
-    "./public/**/*.html",
-  ],
-  plugins: [require("flowbite/plugin")],
-  theme: {},
+import flowbite from "flowbite/plugin";
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: ["./app/**/*.{ts,tsx}", "./node_modules/flowbite-react/lib/**/*.js"],
+  plugins: [flowbite],
 };
+
+export default config;
 ```
 
-#### And replace the contents of `styles/globals.css` by:
+#### And replace the contents of `app/globals.css` by:
 
 ```css
 @tailwind base;
@@ -97,9 +90,11 @@ module.exports = {
 @tailwind utilities;
 ```
 
-#### Start using `flowbite-react`!
+#### Start using `flowbite-react` inside any `app/**/page.tsx`!
 
 ```js
+"use client";
+
 import { Alert } from "flowbite-react";
 
 export default function MyPage() {
@@ -107,12 +102,13 @@ export default function MyPage() {
 }
 ```
 
-## Outstanding issues
-
-- **Carousel**s don't seem to work with [`next/image`](https://nextjs.org/docs/api-reference/next/image), so a normal `<img/>` is required, which ESLint will warn about
-- **Modal**s don't work on `next` on `react@18` because of an hydration mismatch
-
 ## Learn more
+
+### About `flowbite`
+
+[Flowbite](https://flowbite.com) is an open source collection of UI components built with the utility classes from Tailwind CSS that you can use as a starting point when coding user interfaces and websites.
+
+In this repository, we setup [`flowbite-react`](https://flowbite-react.com) for you with examples of how to use the React components in `app/content.tsx`.
 
 ### About `next`
 
@@ -123,14 +119,8 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-### About `flowbite`
-
-[Flowbite](https://flowbite.com) is an open source collection of UI components built with the utility classes from Tailwind CSS that you can use as a starting point when coding user interfaces and websites.
-
-In this repository, we setup [`flowbite-react`](https://flowbite-react.com) for you with examples of how to use the React components in `pages/index.tsx`.
-
 ## Deploy on `vercel`
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
