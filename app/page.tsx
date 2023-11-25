@@ -68,7 +68,7 @@ export default function Index(): JSX.Element {
     <SidebarProvider>
       <Header />
       <div className="flex dark:bg-gray-900">
-        <main className="order-2 mx-4 mt-4 mb-24 flex-[1_0_16rem]">
+        <main className="order-2 mx-4 mb-24 mt-4 flex-[1_0_16rem]">
           <HomePage />
         </main>
         <div className="order-1">
@@ -140,7 +140,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Accordion
           </h2>
         </header>
@@ -148,7 +148,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Avatar
           </h2>
         </header>
@@ -156,7 +156,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Badges
           </h2>
         </header>
@@ -164,7 +164,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Breadcrumb
           </h2>
         </header>
@@ -172,7 +172,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Buttons
           </h2>
         </header>
@@ -180,7 +180,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Button group
           </h2>
         </header>
@@ -188,7 +188,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Card
           </h2>
         </header>
@@ -196,7 +196,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Carousel
           </h2>
         </header>
@@ -204,7 +204,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Dropdown
           </h2>
         </header>
@@ -212,7 +212,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Forms
           </h2>
         </header>
@@ -220,7 +220,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Footer
           </h2>
         </header>
@@ -228,7 +228,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             List group
           </h2>
         </header>
@@ -236,7 +236,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Modal
           </h2>
         </header>
@@ -244,7 +244,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Navbars
           </h2>
         </header>
@@ -252,7 +252,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Pagination
           </h2>
         </header>
@@ -260,7 +260,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Progress
           </h2>
         </header>
@@ -268,7 +268,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Rating
           </h2>
         </header>
@@ -276,7 +276,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Sidebar
           </h2>
         </header>
@@ -284,7 +284,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Spinners
           </h2>
         </header>
@@ -292,7 +292,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Tables
           </h2>
         </header>
@@ -302,7 +302,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Tabs
           </h2>
         </header>
@@ -310,7 +310,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Timeline
           </h2>
         </header>
@@ -318,7 +318,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Toast
           </h2>
         </header>
@@ -326,7 +326,7 @@ function HomePage(): JSX.Element {
       </section>
       <section>
         <header>
-          <h2 className="mt-9 mb-3 text-4xl font-bold dark:text-gray-200">
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
             Tooltips
           </h2>
         </header>
@@ -434,7 +434,7 @@ function AlertsExample(): JSX.Element {
       onDismiss={console.log}
       additionalContent={
         <React.Fragment>
-          <div className="mt-2 mb-4 text-sm text-green-700 dark:text-green-800">
+          <div className="mb-4 mt-2 text-sm text-green-700 dark:text-green-800">
             More info about this info alert goes here. This example text is
             going to run a bit longer so that you can see how spacing within an
             alert works with this kind of content.
