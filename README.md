@@ -31,7 +31,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `app/(dashboard)/content.tsx`. The page auto-updates as you edit the file.
 
 ## Add `flowbite-react` to `next` on your own
 
@@ -108,7 +108,7 @@ export default function MyPage() {
 
 [Flowbite](https://flowbite.com) is an open source collection of UI components built with the utility classes from Tailwind CSS that you can use as a starting point when coding user interfaces and websites.
 
-In this repository, we setup [`flowbite-react`](https://flowbite-react.com) for you with examples of how to use the React components in `app/content.tsx`.
+In this repository, we setup [`flowbite-react`](https://flowbite-react.com) for you with examples of how to use the React components in `app/(dashboard)/content.tsx`.
 
 ### About `next`
 
